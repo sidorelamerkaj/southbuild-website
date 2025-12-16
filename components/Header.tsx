@@ -75,11 +75,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
-        isScrolled
-          ? 'bg-navy-900/95 backdrop-blur-md shadow-lg border-b border-gold-500/20'
-          : 'bg-navy-900/95 backdrop-blur-md md:bg-navy-900/80 md:backdrop-blur-sm'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 w-full"
+      style={{
+        backgroundColor: '#020811',
+        transition: 'box-shadow 0.3s ease, border-bottom 0.3s ease',
+        boxShadow: isScrolled ? '0 4px 6px -1px rgba(0, 0, 0, 0.3)' : 'none',
+        borderBottom: isScrolled ? '1px solid rgba(195, 167, 106, 0.2)' : '1px solid transparent',
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center justify-between h-24 md:h-28">
