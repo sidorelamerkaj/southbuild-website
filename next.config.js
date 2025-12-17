@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [],
+    domains: ['images.unsplash.com'],
     unoptimized: true, // Required for static export
   },
   output: 'export', // Static export for Cloudflare Pages

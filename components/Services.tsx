@@ -2,31 +2,32 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 const serviceCategories = [
   {
     title: 'Investment & Development',
     description: 'Real estate investments, residential/commercial/tourist developments, land feasibility, joint ventures.',
-    image: '/SouthBuild_Invest-3.png',
+    image: '/investment.jpg',
     color: 'from-gold-400 to-gold-500',
   },
   {
     title: 'Construction Services',
     description: 'Residential buildings, villas, commercial spaces, renovations, full project execution.',
-    image: '/SouthBuild_Invest-3.png',
+    image: '/construction.jpg',
     color: 'from-gold-500 to-gold-600',
   },
   {
     title: 'Project Management',
     description: 'Budgeting, cost control, planning, supervision.',
-    image: '/SouthBuild_Invest-3.png',
+    image: '/project.jpg',
     color: 'from-gold-600 to-gold-700',
   },
   {
     title: 'Consulting',
     description: 'Market analysis, feasibility studies, urban planning, permits assistance.',
-    image: '/SouthBuild_Invest-3.png',
+    image: '/consulting.jpg',
     color: 'from-gold-400 to-gold-700',
   },
 ]
@@ -74,7 +75,18 @@ export default function Services() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="relative bg-gradient-to-br from-navy-800 to-navy-900 rounded-2xl overflow-hidden border border-gold-500/10 hover:border-gold-500/30 transition-all duration-300 h-full flex flex-col">
+              <Link
+                href={
+                  category.title === 'Investment & Development'
+                    ? '/services/investment-development'
+                    : category.title === 'Construction Services'
+                    ? '/services/construction-services'
+                    : category.title === 'Project Management'
+                    ? '/services/project-management'
+                    : '/services/consulting'
+                }
+                className="relative bg-gradient-to-br from-navy-800 to-navy-900 rounded-2xl overflow-hidden border border-gold-500/10 hover:border-gold-500/30 transition-all duration-300 h-full flex flex-col block"
+              >
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden">
                   <Image
@@ -82,6 +94,7 @@ export default function Services() {
                     alt={category.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/50 to-transparent"></div>
                   
@@ -112,7 +125,7 @@ export default function Services() {
                 <div
                   className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${category.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}
                 ></div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>

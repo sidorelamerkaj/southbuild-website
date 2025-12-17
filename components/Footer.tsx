@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
 
 const footerLinks = {
@@ -11,10 +12,10 @@ const footerLinks = {
     { name: 'Contact', href: '#contact' },
   ],
   services: [
-    { name: 'Commercial Construction', href: '#services' },
-    { name: 'Residential Development', href: '#services' },
-    { name: 'Investment Management', href: '#services' },
-    { name: 'Project Management', href: '#services' },
+    { name: 'Investment & Development', href: '/services/investment-development' },
+    { name: 'Construction Services', href: '/services/construction-services' },
+    { name: 'Project Management', href: '/services/project-management' },
+    { name: 'Consulting', href: '/services/consulting' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '#' },
@@ -69,12 +70,21 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="hover:text-gold-500 transition-colors"
-                  >
-                    {link.name}
-                  </a>
+                  {link.href.startsWith('#') ? (
+                    <a
+                      href={link.href}
+                      className="hover:text-gold-500 transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="hover:text-gold-500 transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -86,12 +96,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={link.href}
                     className="hover:text-gold-500 transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
