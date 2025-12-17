@@ -358,7 +358,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                   Contact us to learn more about how we can help with your project.
                 </p>
                 <a
-                  href="/#contact"
+                  href="/contact"
                   className="inline-flex items-center justify-center w-full px-6 py-3 bg-navy-900 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors"
                 >
                   Get In Touch

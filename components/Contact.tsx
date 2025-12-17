@@ -48,29 +48,14 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-32 bg-navy-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-20"
-        >
-          <div className="inline-block mb-4 px-4 py-1 bg-gold-500/10 rounded-full border border-gold-500/30">
-            <span className="text-sm font-semibold text-gold-500 uppercase tracking-wider">
-              Contact Us
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Get In Touch
-          </h2>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Ready to start your next project? Contact us today and let's bring
-            your vision to life.
-          </p>
-        </motion.div>
+    <section className="relative py-16 bg-navy-900 overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gold-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gold-500 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
@@ -81,36 +66,51 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <div>
-              <h3 className="text-3xl font-bold text-white mb-6">
+            <div className="mb-10">
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
                 Contact Information
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold-500 to-transparent"></span>
               </h3>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-300 leading-relaxed mt-6">
                 We're here to help and answer any questions you might have. We
                 look forward to hearing from you.
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-5">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={index}
                   href={info.link}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start space-x-6 p-6 bg-gradient-to-br from-navy-800 to-navy-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group border border-gold-500/10 hover:border-gold-500/30"
+                  transition={{ delay: index * 0.15, duration: 0.5 }}
+                  whileHover={{ x: 5 }}
+                  className="flex items-center gap-5 p-6 bg-gradient-to-br from-navy-800/80 to-navy-900/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gold-500/10 hover:border-gold-500/40 hover:bg-gradient-to-br hover:from-navy-800 hover:to-navy-900"
                 >
-                  <div className="w-14 h-14 bg-gradient-to-br from-gold-500 to-gold-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                  <motion.div
+                    className="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-gold-500/50"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ type: 'spring', stiffness: 400 }}
+                  >
                     <info.icon className="w-7 h-7 text-navy-900" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-white mb-2 text-lg">
+                  </motion.div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-white mb-1.5 text-lg group-hover:text-gold-400 transition-colors">
                       {info.title}
                     </h4>
-                    <p className="text-gray-300 text-lg">{info.content}</p>
+                    <p className="text-gray-300 text-base group-hover:text-gray-200 transition-colors">
+                      {info.content}
+                    </p>
                   </div>
+                  <motion.div
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                    initial={{ x: -10 }}
+                    whileHover={{ x: 0 }}
+                  >
+                    <Send className="w-5 h-5 text-gold-500" />
+                  </motion.div>
                 </motion.a>
               ))}
             </div>
@@ -122,13 +122,24 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-navy-800 to-navy-900 rounded-3xl shadow-2xl p-10 border border-gold-500/10"
+            className="relative bg-gradient-to-br from-navy-800/90 to-navy-900/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-10 border border-gold-500/20 overflow-hidden"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gold-500/5 rounded-full blur-3xl"></div>
+            
+            <div className="relative z-10">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 relative inline-block">
+                Send us a Message
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold-500 to-transparent"></span>
+              </h3>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-semibold text-gray-300 mb-3"
+                  className="block text-sm font-semibold text-gray-300 mb-2.5"
                 >
                   Full Name
                 </label>
@@ -139,7 +150,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 bg-navy-900 border border-navy-700 text-white rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition-all placeholder-gray-500 text-lg"
+                  className="w-full px-5 py-4 bg-navy-900/50 border border-gold-500/20 text-white rounded-xl focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 transition-all placeholder-gray-500 text-base hover:border-gold-500/40"
                   placeholder="John Doe"
                 />
               </div>
@@ -147,7 +158,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-semibold text-gray-300 mb-3"
+                  className="block text-sm font-semibold text-gray-300 mb-2.5"
                 >
                   Email Address
                 </label>
@@ -158,7 +169,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 bg-navy-900 border border-navy-700 text-white rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition-all placeholder-gray-500 text-lg"
+                  className="w-full px-5 py-4 bg-navy-900/50 border border-gold-500/20 text-white rounded-xl focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 transition-all placeholder-gray-500 text-base hover:border-gold-500/40"
                   placeholder="john@example.com"
                 />
               </div>
@@ -166,7 +177,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-semibold text-gray-300 mb-3"
+                  className="block text-sm font-semibold text-gray-300 mb-2.5"
                 >
                   Phone Number
                 </label>
@@ -176,7 +187,7 @@ export default function Contact() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 bg-navy-900 border border-navy-700 text-white rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition-all placeholder-gray-500 text-lg"
+                  className="w-full px-5 py-4 bg-navy-900/50 border border-gold-500/20 text-white rounded-xl focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 transition-all placeholder-gray-500 text-base hover:border-gold-500/40"
                   placeholder="+355 XX XXX XXXX"
                 />
               </div>
@@ -184,7 +195,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-semibold text-gray-300 mb-3"
+                  className="block text-sm font-semibold text-gray-300 mb-2.5"
                 >
                   Message
                 </label>
@@ -195,18 +206,31 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-5 py-4 bg-navy-900 border border-navy-700 text-white rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition-all resize-none placeholder-gray-500 text-lg"
+                  className="w-full px-5 py-4 bg-navy-900/50 border border-gold-500/20 text-white rounded-xl focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 transition-all resize-none placeholder-gray-500 text-base hover:border-gold-500/40"
                   placeholder="Tell us about your project..."
                 />
               </div>
 
-              <button
+              <motion.button
                 type="submit"
-                className="w-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-navy-900 font-bold py-5 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-xl hover:shadow-2xl text-lg"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-navy-900 font-bold py-5 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl text-lg mt-2 relative overflow-hidden group"
               >
-                <span>Send Message</span>
-                <Send className="w-5 h-5" />
-              </button>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  animate={{
+                    x: ['-100%', '100%'],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatDelay: 1,
+                  }}
+                />
+                <span className="relative z-10">Send Message</span>
+                <Send className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+              </motion.button>
             </form>
           </motion.div>
         </div>

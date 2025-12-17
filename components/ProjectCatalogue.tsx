@@ -289,7 +289,7 @@ export default function ProjectCatalogue() {
                   Contact us to learn more about availability and investment opportunities.
                 </p>
                 <a
-                  href="/#contact"
+                  href="/contact"
                   className="inline-flex items-center justify-center w-full px-6 py-3 bg-navy-900 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors"
                 >
                   Contact Us

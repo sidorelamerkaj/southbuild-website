@@ -226,9 +226,8 @@ export default function Hero() {
             >
               Building the Future
             </motion.span>
-            <br />
             <motion.span
-              className="text-gold-500 block"
+              className="text-gold-500 block -mt-1"
               animate={{
                 textShadow: [
                   '0 0 30px rgba(195, 167, 106, 0.4)',
@@ -265,7 +264,7 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-4 mb-16"
           >
             <motion.a
-              href="#contact"
+              href="/contact"
               className="group inline-flex items-center px-10 py-5 bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold text-lg rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 relative overflow-hidden"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
