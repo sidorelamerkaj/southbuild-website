@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, CheckCircle, Building2, TrendingUp, ClipboardCheck, FileText } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { getLocalizedPath } from '@/lib/utils'
 
 interface ServiceDetailProps {
   service: {
@@ -25,6 +27,7 @@ const iconMap = {
 }
 
 export default function ServiceDetail({ service }: ServiceDetailProps) {
+  const { t, language } = useLanguage()
   const IconComponent = iconMap[service.iconName]
   
   return (
@@ -167,11 +170,11 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
             transition={{ duration: 0.6 }}
           >
             <Link
-              href="/#services"
+              href={getLocalizedPath('/#services', language)}
               className="inline-flex items-center text-gold-500 hover:text-gold-400 mb-8 transition-colors"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
-              Back to Services
+              {t.services.detail.backToServices}
             </Link>
 
             <div className="flex items-center gap-6 mb-6">
@@ -283,7 +286,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
               </motion.div>
               
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Service Overview
+                {t.services.detail.serviceOverview}
               </h2>
               
               {/* Full Description Below */}
@@ -302,7 +305,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Key Features
+                {t.services.detail.keyFeatures}
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
                 {service.features.map((feature, index) => (
@@ -325,7 +328,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Benefits
+                {t.services.detail.benefits}
               </h2>
               <div className="space-y-4">
                 {service.benefits.map((benefit, index) => (
@@ -352,16 +355,16 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                 className="bg-gradient-to-br from-gold-500 to-gold-600 rounded-2xl p-8 text-center"
               >
                 <h3 className="text-2xl font-bold text-navy-900 mb-4">
-                  Interested in this Service?
+                  {t.services.detail.interested}
                 </h3>
                 <p className="text-navy-900/80 mb-6">
-                  Contact us to learn more about how we can help with your project.
+                  {t.services.detail.contactDescription}
                 </p>
                 <a
-                  href="/contact"
+                  href={getLocalizedPath('/contact', language)}
                   className="inline-flex items-center justify-center w-full px-6 py-3 bg-navy-900 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors"
                 >
-                  Get In Touch
+                  {t.services.detail.getInTouch}
                 </a>
               </motion.div>
 
@@ -373,31 +376,31 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-gradient-to-br from-navy-800 to-navy-900 rounded-2xl p-8 border border-gold-500/10"
               >
-                <h3 className="text-2xl font-bold text-white mb-6">Our Services</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">{t.services.detail.ourServices}</h3>
                 <div className="space-y-3">
                   <Link
-                    href="/services/investment-development"
+                    href={getLocalizedPath('/services/investment-development', language)}
                     className="block text-gray-300 hover:text-gold-500 transition-colors py-2"
                   >
-                    Investment & Development
+                    {t.services.investment.title}
                   </Link>
                   <Link
-                    href="/services/construction-services"
+                    href={getLocalizedPath('/services/construction-services', language)}
                     className="block text-gray-300 hover:text-gold-500 transition-colors py-2"
                   >
-                    Construction Services
+                    {t.services.construction.title}
                   </Link>
                   <Link
-                    href="/services/project-management"
+                    href={getLocalizedPath('/services/project-management', language)}
                     className="block text-gray-300 hover:text-gold-500 transition-colors py-2"
                   >
-                    Project Management
+                    {t.services.projectManagement.title}
                   </Link>
                   <Link
-                    href="/services/consulting"
+                    href={getLocalizedPath('/services/consulting', language)}
                     className="block text-gray-300 hover:text-gold-500 transition-colors py-2"
                   >
-                    Consulting
+                    {t.services.consulting.title}
                   </Link>
                 </div>
               </motion.div>

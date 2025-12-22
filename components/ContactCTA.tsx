@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { getLocalizedPath } from '@/lib/utils'
 
 export default function ContactCTA() {
+  const { t, language } = useLanguage()
   return (
     <section id="contact" className="relative py-32 bg-navy-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -108,7 +111,7 @@ export default function ContactCTA() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
             <span className="bg-gradient-to-r from-white via-gold-100 to-white bg-clip-text text-transparent">
-              Ready to Start Your Project?
+              {t.projects.readyToStart}
             </span>
           </motion.h2>
 
@@ -120,8 +123,7 @@ export default function ContactCTA() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            Contact us today and let's bring your vision to life. We're here to help
-            and answer any questions you might have.
+            {t.projects.contactDescription}
           </motion.p>
 
           {/* CTA Button */}
@@ -132,7 +134,7 @@ export default function ContactCTA() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <Link
-              href="/contact"
+              href={getLocalizedPath('/contact', language)}
               className="group inline-flex items-center px-12 py-5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-navy-900 font-bold text-lg rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-gold-500/50 relative overflow-hidden"
             >
               <motion.div
@@ -146,7 +148,7 @@ export default function ContactCTA() {
                   repeatDelay: 1,
                 }}
               />
-              <span className="relative z-10">Contact Us</span>
+              <span className="relative z-10">{t.projects.contactUs}</span>
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
             </Link>
           </motion.div>

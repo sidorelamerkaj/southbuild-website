@@ -2,36 +2,38 @@
 
 import { motion } from 'framer-motion'
 import { Shield, Award, Lightbulb, Leaf, TrendingUp, Target, Eye, Building2 } from 'lucide-react'
-
-const coreValues = [
-  {
-    icon: Shield,
-    title: 'Integrity',
-    description: 'Transparent, responsible, and ethical operations',
-  },
-  {
-    icon: Award,
-    title: 'Quality',
-    description: 'High standards in every project delivered',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Innovation',
-    description: 'Modern solutions in construction and investment',
-  },
-  {
-    icon: Leaf,
-    title: 'Sustainability',
-    description: 'Environmentally aware development',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Growth',
-    description: 'Long-term value for communities and partners',
-  },
-]
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function About() {
+  const { t } = useLanguage()
+
+  const coreValues = [
+    {
+      icon: Shield,
+      title: t.about.values.integrity.title,
+      description: t.about.values.integrity.description,
+    },
+    {
+      icon: Award,
+      title: t.about.values.quality.title,
+      description: t.about.values.quality.description,
+    },
+    {
+      icon: Lightbulb,
+      title: t.about.values.innovation.title,
+      description: t.about.values.innovation.description,
+    },
+    {
+      icon: Leaf,
+      title: t.about.values.sustainability.title,
+      description: t.about.values.sustainability.description,
+    },
+    {
+      icon: TrendingUp,
+      title: t.about.values.growth.title,
+      description: t.about.values.growth.description,
+    },
+  ]
   return (
     <section id="about" className="py-32 bg-navy-900 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -51,11 +53,11 @@ export default function About() {
         >
           <div className="inline-block mb-6 px-5 py-2 bg-gold-500/10 rounded-full border border-gold-500/30">
             <span className="text-sm font-semibold text-gold-500 uppercase tracking-wider">
-              About Us
+              {t.about.badge}
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            SouthBuild Invest
+            {t.about.title}
           </h2>
         </motion.div>
 
@@ -79,22 +81,20 @@ export default function About() {
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-gold-500 uppercase tracking-widest mb-1">
-                    Company
+                    {t.about.overview.label}
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-white">
-                    Overview
+                    {t.about.overview.title}
                   </h3>
                 </div>
               </div>
 
               <div className="space-y-6">
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                  SouthBuild Invest is an Albanian investment and development company focused on creating
-                  high-value, sustainable projects across Albania.
+                  {t.about.overview.description1}
                 </p>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                  Starting with strong opportunities in the south and expanding nationwide, we operate in
-                  real estate development, construction, strategic investments, and project management.
+                  {t.about.overview.description2}
                 </p>
               </div>
 
@@ -126,16 +126,14 @@ export default function About() {
                 </div>
                 <div className="flex-1">
                   <div className="text-xs font-semibold text-gold-500 uppercase tracking-widest mb-2">
-                    Our Purpose
+                    {t.about.mission.label}
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                    Mission
+                    {t.about.mission.title}
                   </h3>
                   <div className="h-px w-20 bg-gradient-to-r from-gold-500 to-transparent mb-6"></div>
                   <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                    To invest, develop, and deliver high-quality projects that enhance
-                    communities, create long-term value, and set new standards in Albania's
-                    real estate and investment landscape.
+                    {t.about.mission.description}
                   </p>
                 </div>
               </div>
@@ -159,16 +157,14 @@ export default function About() {
                 </div>
                 <div className="flex-1">
                   <div className="text-xs font-semibold text-gold-500 uppercase tracking-widest mb-2">
-                    Our Aspiration
+                    {t.about.vision.label}
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                    Vision
+                    {t.about.vision.title}
                   </h3>
                   <div className="h-px w-20 bg-gradient-to-r from-gold-500 to-transparent mb-6"></div>
                   <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                    To become one of Albania's leading investment and development companies
-                    by expanding our national presence, embracing innovation, and building
-                    projects that stand the test of time.
+                    {t.about.vision.description}
                   </p>
                 </div>
               </div>
@@ -186,14 +182,14 @@ export default function About() {
           <div className="text-center mb-16">
             <div className="inline-block mb-4 px-5 py-2 bg-gold-500/10 rounded-full border border-gold-500/30">
               <span className="text-sm font-semibold text-gold-500 uppercase tracking-wider">
-                Our Foundation
+                {t.about.values.badge}
               </span>
             </div>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Core Values
+              {t.about.values.title}
             </h3>
             <p className="text-gray-400 text-lg md:text-xl">
-              The principles that guide everything we do
+              {t.about.values.subtitle}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">

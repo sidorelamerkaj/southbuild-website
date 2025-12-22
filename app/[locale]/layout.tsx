@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import '../globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
@@ -13,13 +13,19 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'sq' }]
+}
+
+export default function LocaleLayout({
   children,
+  params,
 }: {
   children: React.ReactNode
+  params: { locale: string }
 }) {
   return (
-    <html lang="en">
+    <html lang={params.locale}>
       <body>
         <LanguageProvider>{children}</LanguageProvider>
       </body>

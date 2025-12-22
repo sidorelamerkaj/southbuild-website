@@ -1,0 +1,253 @@
+{
+  "nav": {
+    "home": "Kreu",
+    "about": "Rreth Nesh",
+    "services": "Shërbimet",
+    "projects": "Projektet",
+    "contact": "Kontakti"
+  },
+  "hero": {
+    "badge": "Investime dhe Zhvillim Shqiptar",
+    "title1": "Duke ndërtuar",
+    "title2": "Shqipërinë Elitare",
+    "description": "Projekte me vlerë të lartë dhe të qëndrueshme në të gjithë Shqipërinë. Zhvillim pasurish të paluajtshme, ndërtim, investime strategjike dhe menaxhim projektesh.",
+    "getStarted": "Filloni",
+    "viewProjects": "Shiko Projektet",
+    "stats": {
+      "projects": "Projekte",
+      "investments": "Investime",
+      "years": "Vite",
+      "nationwide": "Prani",
+      "presence": "Kombëtare"
+    }
+  },
+  "about": {
+    "badge": "Rreth Nesh",
+    "title": "SouthBuild Invest",
+    "overview": {
+      "label": "Kompania",
+      "title": "Përmbledhje",
+      "description1": "SouthBuild Invest është një kompani shqiptare investimi dhe zhvillimi e fokusuar në krijimin e projekteve me vlerë të lartë dhe të qëndrueshme në të gjithë Shqipërinë.",
+      "description2": "Duke filluar me mundësi të forta në jug dhe duke u zgjeruar në nivel kombëtar, ne operojmë në zhvillimin e pasurive të paluajtshme, ndërtim, investime strategjike dhe menaxhim projektesh."
+    },
+    "mission": {
+      "label": "Qëllimi Ynë",
+      "title": "Misioni",
+      "description": "Të investojmë, zhvillojmë dhe dorëzojmë projekte me cilësi të lartë që përmirësojnë komunitetet, krijojnë vlerë afatgjatë dhe vendosin standarde të reja në peizazhin e pasurive të paluajtshme dhe investimeve të Shqipërisë."
+    },
+    "vision": {
+      "label": "Aspirata Jonë",
+      "title": "Vizioni",
+      "description": "Të bëhemi një nga kompanitë kryesuese të investimeve dhe zhvillimit në Shqipëri duke zgjeruar praninë tonë kombëtare, duke përqafuar inovacionin dhe duke ndërtuar projekte që qëndrojnë testin e kohës."
+    },
+    "values": {
+      "badge": "Baza Jonë",
+      "title": "Vlerat Themelore",
+      "subtitle": "Parimet që udhëheqin gjithçka që bëjmë",
+      "integrity": {
+        "title": "Integriteti",
+        "description": "Operacione transparente, të përgjegjshme dhe etike"
+      },
+      "quality": {
+        "title": "Cilësia",
+        "description": "Standarde të larta në çdo projekt të dorëzuar"
+      },
+      "innovation": {
+        "title": "Inovacioni",
+        "description": "Zgjidhje moderne në ndërtim dhe investime"
+      },
+      "sustainability": {
+        "title": "Qëndrueshmëria",
+        "description": "Zhvillim i vetëdijshëm mjedisor"
+      },
+      "growth": {
+        "title": "Rritja",
+        "description": "Vlerë afatgjatë për komunitetet dhe partnerët"
+      }
+    }
+  },
+  "services": {
+    "badge": "Shërbimet Tona",
+    "title": "Çfarë Ofrojmë",
+    "description": "Zgjidhje gjithëpërfshirëse për investime, zhvillim, ndërtim dhe menaxhim projektesh në të gjithë Shqipërinë",
+    "investment": {
+      "title": "Investime dhe Zhvillim",
+      "description": "Investime në pasuri të paluajtshme, zhvillime banesore/komerciale/turistike, fizibilitet toke, joint ventures.",
+      "longDescription": "Shërbimet tona të Investimeve dhe Zhvillimit janë krijuar për t'ju ndihmuar të merrni vendime të informuara dhe të maksimizoni kthimet nga investimet tuaja në pasuri të paluajtshme. Ne specializohemi në identifikimin e mundësive me potencial të lartë në të gjithë Shqipërinë, nga zhvillimet banesore kryesore deri te projektet strategjike komerciale dhe zhvillimet turistike.\n\nMe qasjen tonë gjithëpërfshirëse, ne trajtojmë gjithçka nga studimet fillestare të fizibilitetit të tokës deri te partneritetet e joint ventures. Ekipi ynë kombinon ekspertizën e tregut me aftësinë financiare për të dorëzuar projekte që krijojnë vlerë afatgjatë për investitorët dhe komunitetet.",
+      "features": [
+        "Analizë investimesh në pasuri të paluajtshme",
+        "Projekte zhvillimi banesore",
+        "Mundësi zhvillimi komerciale",
+        "Planifikim zhvillimi turistik",
+        "Studime fizibiliteti toke",
+        "Partneritete joint ventures",
+        "Kërkime dhe analiza tregu",
+        "Menaxhim portofoli investimesh"
+      ],
+      "benefits": [
+        "Analizë eksperte e tregut për të identifikuar mundësi me kthim të lartë në të gjithë Shqipërinë",
+        "Studime gjithëpërfshirëse fizibiliteti që sigurojnë viabilitetin dhe përfitimin e projektit",
+        "Partneritete strategjike dhe joint ventures për të maksimizuar potencialin e investimit",
+        "Mbështetje zhvillimi nga koncepti deri në përfundim"
+      ]
+    },
+    "construction": {
+      "title": "Shërbimet e Ndërtimit",
+      "description": "Ndërtesa banesore, villa, hapësira tregtare, rinovime, ekzekutim i plotë i projektit.",
+      "longDescription": "Divizioni ynë i Shërbimeve të Ndërtimit dorëzon ekselencë në çdo projekt, nga ndërtesat luksoze banesore dhe villat deri te hapësirat komerciale moderne. Ne kombinojmë zanatësinë tradicionale me teknikat moderne të ndërtimit për të krijuar struktura që qëndrojnë testin e kohës.\n\nQoftë se keni nevojë për një ndërtim të plotë të ri ose një rinovim gjithëpërfshirës, ekipi ynë me përvojë menaxhon çdo aspekt të procesit të ndërtimit. Ne sigurojmë cilësi, efikasitet dhe përputhje me standardet më të larta të industrisë gjatë gjithë ciklit jetësor të projektit.",
+      "features": [
+        "Ndërtim ndërtesash banesore",
+        "Zhvillim villa luksoze",
+        "Ndërtim hapësirash tregtare",
+        "Rinovim dhe rimodelim",
+        "Ekzekutim i plotë i projektit",
+        "Sigurim dhe kontroll cilësie",
+        "Menaxhim kohëzgjatjeje dhe buxheti",
+        "Praktika të qëndrueshme ndërtimi"
+      ],
+      "benefits": [
+        "Zanatësi eksperte e kombinuar me teknikat moderne të ndërtimit",
+        "Menaxhim gjithëpërfshirës projektesh që siguron dorëzim në kohë dhe brenda buxhetit",
+        "Sigurim cilësie në çdo fazë të ndërtimit",
+        "Praktika të qëndrueshme dhe të vetëdijshme mjedisore ndërtimi"
+      ]
+    },
+    "projectManagement": {
+      "title": "Menaxhimi i Projekteve",
+      "description": "Buxhetimi, kontrolli i kostove, planifikimi, mbikëqyrja.",
+      "longDescription": "Shërbimet tona të Menaxhimit të Projekteve sigurojnë që projektet tuaja të ndërtimit dhe zhvillimit të dorëzohen me sukses, në kohë dhe brenda buxhetit. Ne ofrojmë mbikëqyrje dhe koordinim gjithëpërfshirës gjatë gjithë ciklit jetësor të projektit.\n\nNga planifikimi fillestar dhe buxhetimi deri në dorëzimin përfundimtar, menaxherët tanë me përvojë të projekteve punojnë ngushtë me të gjithë palët e interesuara për të siguruar ekzekutim të qetë. Ne zbatojmë masa rigoroze kontrolli të kostove dhe mbajmë mbikëqyrje të detajuar për të mbajtur projektin tuaj në rrugën e duhur.",
+      "features": [
+        "Planifikim gjithëpërfshirës projektesh",
+        "Zhvillim dhe menaxhim buxheti",
+        "Kontroll dhe monitorim kostosh",
+        "Planifikim dhe ndjekje kohëzgjatjeje",
+        "Mbikëqyrje cilësie",
+        "Koordinim palësh të interesuara",
+        "Menaxhim rreziku",
+        "Raportim progresi"
+      ],
+      "benefits": [
+        "Mbikëqyrje profesionale projektesh që siguron dorëzim të suksesshëm",
+        "Kontroll rigoroz buxheti dhe kostosh që maksimizon vlerën",
+        "Planifikim dhe planifikim i detajuar që parandalon vonesat",
+        "Mbikëqyrje gjithëpërfshirëse që mban standardet e cilësisë"
+      ]
+    },
+    "consulting": {
+      "title": "Konsultime",
+      "description": "Analizë tregu, studime fizibiliteti, planifikim urban, asistencë lejesh.",
+      "longDescription": "Shërbimet tona të Konsultimit ofrojnë udhëzim ekspert për t'ju ndihmuar të merrni vendime të informuara për projektet tuaja të pasurive të paluajtshme dhe zhvillimit. Ne ofrojmë analizë gjithëpërfshirëse të tregut, studime të detajuara fizibiliteti dhe mbështetje planifikimi strategjik.\n\nEkipi ynë i konsulentëve me përvojë punon ngushtë me klientët për të lundruar kërkesat komplekse rregullatore, për të marrë lejet e nevojshme dhe për të zhvilluar strategji efektive planifikimi urban. Ne kombinojmë njohuritë e tregut lokal me praktikat më të mira ndërkombëtare për të dorëzuar njohuri të veprueshme.",
+      "features": [
+        "Analizë dhe kërkime tregu",
+        "Studime fizibiliteti",
+        "Konsultim planifikimi urban",
+        "Asistencë lejesh dhe rregullore",
+        "Planifikim strategjik",
+        "Vlerësim rreziku",
+        "Analizë financiare",
+        "Mbështetje due diligence"
+      ],
+      "benefits": [
+        "Njohuri eksperte tregu që ju ndihmojnë të merrni vendime të informuara investimi",
+        "Studime gjithëpërfshirëse fizibiliteti që sigurojnë viabilitetin e projektit",
+        "Ekspertizë rregullatore që shpejton lejet dhe miratimet",
+        "Mbështetje planifikimi strategjik për rezultate optimale projektesh"
+      ]
+    },
+    "learnMore": "Mësoni Më Shumë",
+    "detail": {
+      "backToServices": "Kthehu te Shërbimet",
+      "serviceOverview": "Përmbledhje Shërbimi",
+      "keyFeatures": "Karakteristika Kryesore",
+      "benefits": "Përfitimet",
+      "interested": "Të Interesuar për këtë Shërbim?",
+      "contactDescription": "Na kontaktoni për të mësuar më shumë se si mund t'ju ndihmojmë me projektin tuaj.",
+      "getInTouch": "Lidhuni me Ne",
+      "ourServices": "Shërbimet Tona"
+    }
+  },
+  "projects": {
+    "title": "Projektet Tona",
+    "description": "Duke treguar portofolin tonë të projekteve të jashtëzakonshme të ndërtimit dhe zhvillimit në të gjithë Shqipërinë.",
+    "viewDetails": "Shiko Detajet",
+    "readyToStart": "Gati për të Filluar Projektin Tuaj?",
+    "contactDescription": "Na kontaktoni sot dhe le ta bëjmë realitet vizionin tuaj. Ne jemi këtu për të ndihmuar dhe për t'u përgjigjur çdo pyetjeje që mund të keni.",
+    "contactUs": "Na Kontaktoni",
+    "list": [
+      {
+        "title": "Kompleks Banimi Luksoz",
+        "description": "Kompleks banesor modern me dizajn të qëndrueshëm dhe lehtësira premium në zemër të Shqipërisë jugore.",
+        "categoryKey": "Residential"
+      },
+      {
+        "title": "Villa Luksoze",
+        "description": "Villa ekskluzive luksoze me pamje panoramike, përfundime premium dhe parime dizajni të qëndrueshëm.",
+        "categoryKey": "Residential"
+      },
+      {
+        "title": "Kompleks Banesor për Familje",
+        "description": "Kompleks banesor me cilësi të lartë i projektuar për familje, me lehtësira moderne dhe dizajn të qëndrueshëm me çmime të arritshme.",
+        "categoryKey": "Residential"
+      }
+    ],
+    "categories": {
+      "Residential": "Banesore",
+      "Commercial": "Komerci",
+      "Tourist": "Turistik",
+      "Mixed-Use": "Me Përdorim Të Përzier"
+    }
+  },
+  "contact": {
+    "title": "Na Kontaktoni",
+    "subtitle": "Lidhuni me ne. Ne jemi këtu për të ndihmuar dhe për t'u përgjigjur çdo pyetjeje që mund të keni.",
+    "description": "Lidhuni me ne sot",
+    "contactInformation": {
+      "title": "Informacioni i Kontaktit",
+      "description": "Ne jemi këtu për të ndihmuar dhe për t'u përgjigjur çdo pyetjeje që mund të keni. Ne shohim përpara për të dëgjuar nga ju."
+    },
+    "info": {
+      "phone": "Telefoni",
+      "email": "Email",
+      "address": "Adresa"
+    },
+    "form": {
+      "title": "Dërgoni një Mesazh",
+      "fullName": "Emri i Plotë",
+      "emailAddress": "Adresa e Email-it",
+      "phoneNumber": "Numri i Telefonit",
+      "message": "Mesazhi",
+      "namePlaceholder": "Gjon Gjoni",
+      "emailPlaceholder": "gjon@example.com",
+      "phonePlaceholder": "+355 XX XXX XXXX",
+      "messagePlaceholder": "Na tregoni për projektin tuaj...",
+      "sending": "Duke dërguar...",
+      "send": "Dërgo Mesazhin",
+      "success": "✓ Faleminderit! Mesazhi juaj është dërguar me sukses.",
+      "error": "✗ Diçka shkoi keq. Ju lutemi provoni përsëri ose na kontaktoni direkt."
+    }
+  },
+  "footer": {
+    "slogan": "Duke ndërtuar Shqipërinë elitare.",
+    "company": "Kompania",
+    "services": "Shërbimet",
+    "contact": "Kontakti",
+    "aboutUs": "Rreth Nesh",
+    "privacyPolicy": "Politika e Privatësisë",
+    "cookiePolicy": "Politika e Cookies",
+    "rights": "Të gjitha të drejtat e rezervuara.",
+    "builtWith": "E ndërtuar me",
+    "excellence": "ekselencë",
+    "and": "dhe",
+    "innovation": "inovacion"
+  },
+  "comingSoon": {
+    "title": "Diçka e Mrekullueshme Po Vjen Së Shpejti",
+    "subtitle": "Ne po punojmë me zell për t'ju sjellë një përvojë të jashtëzakonshme. Qëndroni të lidhur për diçka të jashtëzakonshme!"
+  },
+  "common": {
+    "location": "Shqipëria",
+    "year": "Viti",
+    "category": "Kategoria"
+  }
+}
+

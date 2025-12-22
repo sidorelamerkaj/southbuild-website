@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { getLocalizedPath } from '@/lib/utils'
 import {
   MapPin,
   Calendar,
@@ -79,6 +81,7 @@ Located in a prime area with easy access to major transportation routes, shoppin
 }
 
 export default function ProjectCatalogue() {
+  const { language } = useLanguage()
   return (
     <div className="bg-navy-900">
       {/* Hero Section */}
@@ -289,7 +292,7 @@ export default function ProjectCatalogue() {
                   Contact us to learn more about availability and investment opportunities.
                 </p>
                 <a
-                  href="/contact"
+                  href={getLocalizedPath('/contact', language)}
                   className="inline-flex items-center justify-center w-full px-6 py-3 bg-navy-900 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors"
                 >
                   Contact Us

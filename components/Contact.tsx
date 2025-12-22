@@ -3,29 +3,18 @@
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Send } from 'lucide-react'
 import { useState } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
-const contactInfo = [
-  {
-    icon: Phone,
-    title: 'Phone',
-    content: '+355 XX XXX XXXX',
-    link: 'tel:+355XXXXXXXXX',
-  },
-  {
-    icon: Mail,
-    title: 'Email',
-    content: 'info@southbuildinvest.com',
-    link: 'mailto:info@southbuildinvest.com',
-  },
-  {
-    icon: MapPin,
-    title: 'Address',
-    content: 'Albania',
-    link: '#',
-  },
+const contactInfoKeys = ['phone', 'email', 'address'] as const
+const contactIcons = [Phone, Mail, MapPin]
+const contactLinks = [
+  'tel:+355XXXXXXXXX',
+  'mailto:info@southbuildinvest.com',
+  '#',
 ]
 
 export default function Contact() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,6 +23,19 @@ export default function Contact() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const contactContent = [
+    '+355 XX XXX XXXX',
+    'info@southbuildinvest.com',
+    t.common.location,
+  ]
+
+  const contactInfo = contactInfoKeys.map((key, index) => ({
+    icon: contactIcons[index],
+    title: t.contact.info[key],
+    content: contactContent[index],
+    link: contactLinks[index],
+  }))
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -105,12 +107,11 @@ export default function Contact() {
           >
             <div className="mb-10">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
-                Contact Information
+                {t.contact.contactInformation.title}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold-500 to-transparent"></span>
               </h3>
               <p className="text-lg text-gray-300 leading-relaxed mt-6">
-                We're here to help and answer any questions you might have. We
-                look forward to hearing from you.
+                {t.contact.contactInformation.description}
               </p>
             </div>
 
@@ -167,7 +168,7 @@ export default function Contact() {
             
             <div className="relative z-10">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 relative inline-block">
-                Send us a Message
+                {t.contact.form.title}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold-500 to-transparent"></span>
               </h3>
             </div>
@@ -178,7 +179,7 @@ export default function Contact() {
                   htmlFor="name"
                   className="block text-sm font-semibold text-gray-300 mb-2.5"
                 >
-                  Full Name
+                  {t.contact.form.fullName}
                 </label>
                 <input
                   type="text"
@@ -188,7 +189,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-5 py-4 bg-navy-900/50 border border-gold-500/20 text-white rounded-xl focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 transition-all placeholder-gray-500 text-base hover:border-gold-500/40"
-                  placeholder="John Doe"
+                  placeholder={t.contact.form.namePlaceholder}
                 />
               </div>
 
@@ -197,7 +198,7 @@ export default function Contact() {
                   htmlFor="email"
                   className="block text-sm font-semibold text-gray-300 mb-2.5"
                 >
-                  Email Address
+                  {t.contact.form.emailAddress}
                 </label>
                 <input
                   type="email"
@@ -207,7 +208,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-5 py-4 bg-navy-900/50 border border-gold-500/20 text-white rounded-xl focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 transition-all placeholder-gray-500 text-base hover:border-gold-500/40"
-                  placeholder="john@example.com"
+                  placeholder={t.contact.form.emailPlaceholder}
                 />
               </div>
 
@@ -216,7 +217,7 @@ export default function Contact() {
                   htmlFor="phone"
                   className="block text-sm font-semibold text-gray-300 mb-2.5"
                 >
-                  Phone Number
+                  {t.contact.form.phoneNumber}
                 </label>
                 <input
                   type="tel"
@@ -225,7 +226,7 @@ export default function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-5 py-4 bg-navy-900/50 border border-gold-500/20 text-white rounded-xl focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 transition-all placeholder-gray-500 text-base hover:border-gold-500/40"
-                  placeholder="+355 XX XXX XXXX"
+                  placeholder={t.contact.form.phonePlaceholder}
                 />
               </div>
 
@@ -234,7 +235,7 @@ export default function Contact() {
                   htmlFor="message"
                   className="block text-sm font-semibold text-gray-300 mb-2.5"
                 >
-                  Message
+                  {t.contact.form.message}
                 </label>
                 <textarea
                   id="message"
@@ -244,7 +245,7 @@ export default function Contact() {
                   required
                   rows={5}
                   className="w-full px-5 py-4 bg-navy-900/50 border border-gold-500/20 text-white rounded-xl focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 transition-all resize-none placeholder-gray-500 text-base hover:border-gold-500/40"
-                  placeholder="Tell us about your project..."
+                  placeholder={t.contact.form.messagePlaceholder}
                 />
               </div>
 
@@ -254,7 +255,7 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   className="p-4 bg-green-500/20 border border-green-500/50 rounded-xl text-green-400 text-center"
                 >
-                  ✓ Thank you! Your message has been sent successfully.
+                  {t.contact.form.success}
                 </motion.div>
               )}
 
@@ -264,7 +265,7 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   className="p-4 bg-red-500/20 border border-red-500/50 rounded-xl text-red-400 text-center"
                 >
-                  ✗ Something went wrong. Please try again or contact us directly.
+                  {t.contact.form.error}
                 </motion.div>
               )}
 
@@ -289,7 +290,7 @@ export default function Contact() {
                   }}
                 />
                 <span className="relative z-10">
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? t.contact.form.sending : t.contact.form.send}
                 </span>
                 {!isSubmitting && (
                   <Send className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />

@@ -4,35 +4,37 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-
-const serviceCategories = [
-  {
-    title: 'Investment & Development',
-    description: 'Real estate investments, residential/commercial/tourist developments, land feasibility, joint ventures.',
-    image: '/investment.jpg',
-    color: 'from-gold-400 to-gold-500',
-  },
-  {
-    title: 'Construction Services',
-    description: 'Residential buildings, villas, commercial spaces, renovations, full project execution.',
-    image: '/construction.jpg',
-    color: 'from-gold-500 to-gold-600',
-  },
-  {
-    title: 'Project Management',
-    description: 'Budgeting, cost control, planning, supervision.',
-    image: '/project.jpg',
-    color: 'from-gold-600 to-gold-700',
-  },
-  {
-    title: 'Consulting',
-    description: 'Market analysis, feasibility studies, urban planning, permits assistance.',
-    image: '/consulting.jpg',
-    color: 'from-gold-400 to-gold-700',
-  },
-]
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Services() {
+  const { t } = useLanguage()
+
+  const serviceCategories = [
+    {
+      title: t.services.investment.title,
+      description: t.services.investment.description,
+      image: '/investment.jpg',
+      color: 'from-gold-400 to-gold-500',
+    },
+    {
+      title: t.services.construction.title,
+      description: t.services.construction.description,
+      image: '/construction.jpg',
+      color: 'from-gold-500 to-gold-600',
+    },
+    {
+      title: t.services.projectManagement.title,
+      description: t.services.projectManagement.description,
+      image: '/project.jpg',
+      color: 'from-gold-600 to-gold-700',
+    },
+    {
+      title: t.services.consulting.title,
+      description: t.services.consulting.description,
+      image: '/consulting.jpg',
+      color: 'from-gold-400 to-gold-700',
+    },
+  ]
   return (
     <section id="services" className="py-32 bg-navy-900 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -52,15 +54,14 @@ export default function Services() {
         >
           <div className="inline-block mb-6 px-5 py-2 bg-gold-500/10 rounded-full border border-gold-500/30">
             <span className="text-sm font-semibold text-gold-500 uppercase tracking-wider">
-              Our Services
+              {t.services.badge}
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            What We Offer
+            {t.services.title}
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive solutions for investment, development, construction, and
-            project management across Albania
+            {t.services.description}
           </p>
         </motion.div>
 
@@ -77,11 +78,11 @@ export default function Services() {
             >
               <Link
                 href={
-                  category.title === 'Investment & Development'
+                  category.title === t.services.investment.title
                     ? '/services/investment-development'
-                    : category.title === 'Construction Services'
+                    : category.title === t.services.construction.title
                     ? '/services/construction-services'
-                    : category.title === 'Project Management'
+                    : category.title === t.services.projectManagement.title
                     ? '/services/project-management'
                     : '/services/consulting'
                 }
@@ -116,7 +117,7 @@ export default function Services() {
 
                   {/* Read more link */}
                   <div className="flex items-center text-gold-500 font-semibold text-sm group-hover:text-gold-400 transition-colors">
-                    <span>Learn More</span>
+                    <span>{t.services.learnMore}</span>
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>

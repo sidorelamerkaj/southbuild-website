@@ -4,8 +4,11 @@ import { motion } from 'framer-motion'
 import { ArrowRight, TrendingUp, Building2, Award, MapPin, ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { getLocalizedPath } from '@/lib/utils'
 
 export default function Hero() {
+  const { t, language } = useLanguage()
   return (
     <section
       id="home"
@@ -198,7 +201,7 @@ export default function Hero() {
             className="inline-block mb-6 px-6 py-2 bg-gold-500/10 backdrop-blur-sm rounded-full border border-gold-500/30"
           >
             <span className="text-sm font-semibold text-gold-400 uppercase tracking-wider">
-              Albanian Investment & Development
+              {t.hero.badge}
             </span>
           </motion.div>
 
@@ -224,7 +227,7 @@ export default function Hero() {
                 ease: 'easeInOut',
               }}
             >
-              Building the Future
+              {t.hero.title1}
             </motion.span>
             <motion.span
               className="text-gold-500 block -mt-1"
@@ -241,7 +244,7 @@ export default function Hero() {
                 ease: 'easeInOut',
               }}
             >
-              of Albania
+              {t.hero.title2}
             </motion.span>
           </motion.h1>
 
@@ -252,8 +255,7 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            High-value, sustainable projects across Albania. Real estate development,
-            construction, strategic investments, and project management.
+            {t.hero.description}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -264,7 +266,7 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-4 mb-16"
           >
             <motion.a
-              href="/contact"
+              href={getLocalizedPath('/contact', language)}
               className="group inline-flex items-center px-10 py-5 bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold text-lg rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 relative overflow-hidden"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -294,14 +296,14 @@ export default function Hero() {
                   repeatDelay: 1,
                 }}
               />
-              <span className="relative z-10">Get Started</span>
+              <span className="relative z-10">{t.hero.getStarted}</span>
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
             </motion.a>
             <Link
-              href="/projects"
+              href={getLocalizedPath('/projects', language)}
               className="inline-flex items-center px-10 py-5 bg-transparent hover:bg-gold-500/10 text-white font-bold text-lg rounded-lg border-2 border-gold-500/50 hover:border-gold-500 transition-all duration-300 backdrop-blur-sm"
             >
-              View Projects
+              {t.hero.viewProjects}
             </Link>
           </motion.div>
 
@@ -313,10 +315,10 @@ export default function Hero() {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             {[
-              { icon: Building2, value: '500+', label: 'Projects' },
-              { icon: TrendingUp, value: '$2B+', label: 'Investments' },
-              { icon: Award, value: '25+', label: 'Years' },
-              { icon: MapPin, value: 'Nationwide', label: 'Presence' },
+              { icon: Building2, value: '500+', label: t.hero.stats.projects },
+              { icon: TrendingUp, value: '$2B+', label: t.hero.stats.investments },
+              { icon: Award, value: '25+', label: t.hero.stats.years },
+              { icon: MapPin, value: t.hero.stats.nationwide, label: t.hero.stats.presence },
             ].map((stat, index) => (
               <motion.div
                 key={index}

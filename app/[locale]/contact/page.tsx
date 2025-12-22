@@ -1,16 +1,14 @@
 'use client'
 
 import Header from '@/components/Header'
-import Projects from '@/components/Projects'
 import Footer from '@/components/Footer'
+import Contact from '@/components/Contact'
 import { motion } from 'framer-motion'
-import { Building2, ArrowRight } from 'lucide-react'
-import Link from 'next/link'
+import { MapPin } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { getLocalizedPath } from '@/lib/utils'
 
-export default function ProjectsPage() {
-  const { t, language } = useLanguage()
+export default function ContactPage() {
+  const { t } = useLanguage()
   return (
     <main className="min-h-screen bg-navy-900">
       <Header />
@@ -168,7 +166,7 @@ export default function ProjectsPage() {
                   ease: 'easeInOut',
                 }}
               >
-                <Building2 className="w-10 h-10 text-navy-900 relative z-10" />
+                <MapPin className="w-10 h-10 text-navy-900 relative z-10" />
                 {/* Pulsing glow ring */}
                 <motion.div
                   className="absolute inset-0 rounded-2xl border-2 border-gold-400"
@@ -185,86 +183,62 @@ export default function ProjectsPage() {
               </motion.div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg">
                 <span className="bg-gradient-to-r from-white via-gold-100 to-white bg-clip-text text-transparent">
-                  {t.projects.title}
+                  {t.contact.title}
                 </span>
               </h1>
             </div>
 
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl">
-              {t.projects.description}
+              {t.contact.subtitle}
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Contact Section */}
       <div className="pt-16">
-        <Projects />
+        <Contact />
       </div>
 
-      {/* Call to Action */}
-      <section className="relative py-32 bg-navy-900 overflow-hidden">
+      {/* Map Section */}
+      <section className="py-16 bg-navy-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gold-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gold-500 rounded-full blur-3xl"></div>
         </div>
 
-        {/* Decorative Lines */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
-
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {/* Heading */}
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
-            >
-              <span className="bg-gradient-to-r from-white via-gold-100 to-white bg-clip-text text-transparent">
-                {t.projects.readyToStart}
-              </span>
-            </motion.h2>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed"
-            >
-              {t.projects.contactDescription}
-            </motion.p>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <Link
-                href={getLocalizedPath('/contact', language)}
-                className="group inline-flex items-center px-12 py-5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-navy-900 font-bold text-lg rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-gold-500/50 relative overflow-hidden"
-              >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  animate={{
-                    x: ['-100%', '100%'],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatDelay: 1,
-                  }}
-                />
-                <span className="relative z-10">{t.projects.contactUs}</span>
-                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
-              </Link>
-            </motion.div>
-          </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative group"
+          >
+            {/* Decorative Frame */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-gold-500/20 via-gold-500/30 to-gold-500/20 rounded-3xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <div className="relative rounded-2xl overflow-hidden border-2 border-gold-500/30 shadow-2xl bg-navy-800/20 backdrop-blur-sm">
+              {/* Gold corner accents */}
+              <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-gold-500/50 rounded-tl-2xl z-10"></div>
+              <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-gold-500/50 rounded-tr-2xl z-10"></div>
+              <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-gold-500/50 rounded-bl-2xl z-10"></div>
+              <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-gold-500/50 rounded-br-2xl z-10"></div>
+              
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.363734147816!2d19.818451315287!3d41.32750697927059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350310370%3A0x5a6b5b5b5b5b5b5b!2sTirana%2C%20Albania!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                width="100%"
+                height="600"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full relative z-0"
+                title="Tirana, Albania Map"
+              ></iframe>
+            </div>
+          </motion.div>
         </div>
       </section>
 

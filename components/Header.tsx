@@ -6,12 +6,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X, Phone, Mail } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
+import LanguageSwitcher from './LanguageSwitcher'
+import { getLocalizedPath } from '@/lib/utils'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
+  const { t, language } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,8 +52,9 @@ export default function Header() {
     
     if (href.startsWith('#')) {
       // If we're on a different page, navigate to home first with hash
-      if (pathname !== '/') {
-        router.push(`/${href}`)
+      const currentPath = pathname.replace(/^\/[^/]+/, '') || '/'
+      if (currentPath !== '/') {
+        router.push(getLocalizedPath('/', language) + href)
       } else {
         // If we're on home page, scroll to section
         setTimeout(() => {
@@ -61,16 +66,16 @@ export default function Header() {
       }
     } else {
       // External link or projects page
-      router.push(href)
+      router.push(getLocalizedPath(href, language))
     }
   }
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Contact', href: '/contact' },
+    { name: t.nav.home, href: '#home' },
+    { name: t.nav.about, href: '#about' },
+    { name: t.nav.services, href: '#services' },
+    { name: t.nav.projects, href: '/projects' },
+    { name: t.nav.contact, href: '/contact' },
   ]
 
   return (
@@ -89,7 +94,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-24 md:h-28">
           {/* Logo */}
           <div className="flex-shrink-0 z-10">
-            <Link href="/" className="flex items-center group">
+            <Link href={getLocalizedPath('/', language)} className="flex items-center group">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
@@ -133,8 +138,9 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Phone Contact - Right Side */}
-          <div className="hidden lg:flex items-center z-10">
+          {/* Language Switcher and Phone Contact - Right Side */}
+          <div className="hidden lg:flex items-center gap-3 z-10">
+            <LanguageSwitcher />
             <a
               href="tel:+355XXXXXXXXX"
               className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-navy-800/40 hover:bg-gold-500/10 border border-gold-500/20 hover:border-gold-500/40 text-gray-300 hover:text-gold-400 transition-all duration-300 group"
@@ -144,19 +150,22 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <motion.button
-            className="md:hidden p-2.5 rounded-lg bg-navy-800/50 hover:bg-gold-500/10 border border-gold-500/20 text-gray-300 hover:text-gold-500 transition-all duration-300 z-50 relative"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-            whileTap={{ scale: 0.95 }}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </motion.button>
+          {/* Mobile Menu Button and Language Switcher */}
+          <div className="md:hidden flex items-center gap-2 z-50 relative">
+            <LanguageSwitcher />
+            <motion.button
+              className="p-2.5 rounded-lg bg-navy-800/50 hover:bg-gold-500/10 border border-gold-500/20 text-gray-300 hover:text-gold-500 transition-all duration-300"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+              whileTap={{ scale: 0.95 }}
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </motion.button>
+          </div>
         </div>
       </div>
 

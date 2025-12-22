@@ -3,65 +3,26 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, MapPin, Calendar } from 'lucide-react'
 import Image from 'next/image'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { getLocalizedPath } from '@/lib/utils'
 
-const projects = [
-  {
-    title: 'Luxury Residential Complex',
-    location: 'Albania',
-    year: '2026',
-    description:
-      'Modern residential complex featuring sustainable design and premium amenities in the heart of southern Albania.',
-    image: '/SouthBuild_Invest-3.png',
-    category: 'Residential',
-  },
-  {
-    title: 'Commercial Business Center',
-    location: 'Albania',
-    year: '2026 - 2027',
-    description:
-      'State-of-the-art commercial center with cutting-edge facilities and design, setting new standards for business spaces.',
-    image: '/SouthBuild_Invest-3.png',
-    category: 'Commercial',
-  },
-  {
-    title: 'Tourist Development',
-    location: 'Albania',
-    year: '2026 - 2027',
-    description:
-      'Innovative tourist development combining luxury accommodations with sustainable practices along the beautiful coastline.',
-    image: '/SouthBuild_Invest-3.png',
-    category: 'Tourist',
-  },
-  {
-    title: 'Mixed-Use Development',
-    location: 'Albania',
-    year: '2026 - 2027',
-    description:
-      'Comprehensive mixed-use project combining residential, retail, and office spaces to create vibrant communities.',
-    image: '/SouthBuild_Invest-3.png',
-    category: 'Mixed-Use',
-  },
-  {
-    title: 'Luxury Villas',
-    location: 'Albania',
-    year: '2026 - 2027',
-    description:
-      'Exclusive luxury villas with panoramic views, premium finishes, and sustainable design principles.',
-    image: '/SouthBuild_Invest-3.png',
-    category: 'Residential',
-  },
-  {
-    title: 'Urban Regeneration Project',
-    location: 'Albania',
-    year: '2026 - 2027',
-    description:
-      'Comprehensive urban regeneration project revitalizing neighborhoods with modern infrastructure and green spaces.',
-    image: '/SouthBuild_Invest-3.png',
-    category: 'Commercial',
-  },
-]
+const projectYears = ['2026', '2026 - 2027', '2026 - 2027']
 
 export default function Projects() {
+  const { t, language } = useLanguage()
+  
+  const projects = t.projects.list.map((project, index) => {
+    const categoryKey = project.categoryKey as keyof typeof t.projects.categories
+    return {
+      title: project.title,
+      location: t.common.location,
+      year: projectYears[index],
+      description: project.description,
+      image: '/SouthBuild_Invest-3.png',
+      category: t.projects.categories[categoryKey] || project.categoryKey,
+    }
+  })
+  
   return (
     <section className="py-16 bg-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,10 +78,10 @@ export default function Projects() {
 
                 {/* View More */}
                 <a
-                  href="/coming-soon"
+                  href={getLocalizedPath('/coming-soon', language)}
                   className="inline-flex items-center text-gold-500 font-semibold hover:text-gold-400 transition-colors group/link"
                 >
-                  View Details
+                  {t.projects.viewDetails}
                   <ExternalLink className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </a>
               </div>

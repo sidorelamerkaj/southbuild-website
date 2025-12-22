@@ -1,0 +1,253 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Albanian Investment & Development",
+    "title1": "Building the Future",
+    "title2": "of Albania",
+    "description": "High-value, sustainable projects across Albania. Real estate development, construction, strategic investments, and project management.",
+    "getStarted": "Get Started",
+    "viewProjects": "View Projects",
+    "stats": {
+      "projects": "Projects",
+      "investments": "Investments",
+      "years": "Years",
+      "nationwide": "Nationwide",
+      "presence": "Presence"
+    }
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "SouthBuild Invest",
+    "overview": {
+      "label": "Company",
+      "title": "Overview",
+      "description1": "SouthBuild Invest is an Albanian investment and development company focused on creating high-value, sustainable projects across Albania.",
+      "description2": "Starting with strong opportunities in the south and expanding nationwide, we operate in real estate development, construction, strategic investments, and project management."
+    },
+    "mission": {
+      "label": "Our Purpose",
+      "title": "Mission",
+      "description": "To invest, develop, and deliver high-quality projects that enhance communities, create long-term value, and set new standards in Albania's real estate and investment landscape."
+    },
+    "vision": {
+      "label": "Our Aspiration",
+      "title": "Vision",
+      "description": "To become one of Albania's leading investment and development companies by expanding our national presence, embracing innovation, and building projects that stand the test of time."
+    },
+    "values": {
+      "badge": "Our Foundation",
+      "title": "Core Values",
+      "subtitle": "The principles that guide everything we do",
+      "integrity": {
+        "title": "Integrity",
+        "description": "Transparent, responsible, and ethical operations"
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "High standards in every project delivered"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Modern solutions in construction and investment"
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "Environmentally aware development"
+      },
+      "growth": {
+        "title": "Growth",
+        "description": "Long-term value for communities and partners"
+      }
+    }
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "What We Offer",
+    "description": "Comprehensive solutions for investment, development, construction, and project management across Albania",
+    "investment": {
+      "title": "Investment & Development",
+      "description": "Real estate investments, residential/commercial/tourist developments, land feasibility, joint ventures.",
+      "longDescription": "Our Investment & Development services are designed to help you make informed decisions and maximize returns on your real estate investments. We specialize in identifying high-potential opportunities across Albania, from prime residential developments to strategic commercial projects and tourist developments.\n\nWith our comprehensive approach, we handle everything from initial land feasibility studies to joint venture partnerships. Our team combines market expertise with financial acumen to deliver projects that create long-term value for investors and communities alike.",
+      "features": [
+        "Real estate investment analysis",
+        "Residential development projects",
+        "Commercial development opportunities",
+        "Tourist development planning",
+        "Land feasibility studies",
+        "Joint venture partnerships",
+        "Market research and analysis",
+        "Investment portfolio management"
+      ],
+      "benefits": [
+        "Expert market analysis to identify high-return opportunities across Albania",
+        "Comprehensive feasibility studies ensuring project viability and profitability",
+        "Strategic partnerships and joint ventures to maximize investment potential",
+        "End-to-end development support from concept to completion"
+      ]
+    },
+    "construction": {
+      "title": "Construction Services",
+      "description": "Residential buildings, villas, commercial spaces, renovations, full project execution.",
+      "longDescription": "Our Construction Services division delivers excellence in every project, from luxury residential buildings and villas to state-of-the-art commercial spaces. We combine traditional craftsmanship with modern construction techniques to create structures that stand the test of time.\n\nWhether you need a complete new build or a comprehensive renovation, our experienced team manages every aspect of the construction process. We ensure quality, efficiency, and adherence to the highest industry standards throughout the entire project lifecycle.",
+      "features": [
+        "Residential building construction",
+        "Luxury villa development",
+        "Commercial space construction",
+        "Renovation and remodeling",
+        "Full project execution",
+        "Quality assurance and control",
+        "Timeline and budget management",
+        "Sustainable building practices"
+      ],
+      "benefits": [
+        "Expert craftsmanship combined with modern construction techniques",
+        "Comprehensive project management ensuring on-time and on-budget delivery",
+        "Quality assurance at every stage of construction",
+        "Sustainable and environmentally conscious building practices"
+      ]
+    },
+    "projectManagement": {
+      "title": "Project Management",
+      "description": "Budgeting, cost control, planning, supervision.",
+      "longDescription": "Our Project Management services ensure your construction and development projects are delivered successfully, on time, and within budget. We provide comprehensive oversight and coordination throughout the entire project lifecycle.\n\nFrom initial planning and budgeting to final delivery, our experienced project managers work closely with all stakeholders to ensure seamless execution. We implement rigorous cost control measures and maintain detailed supervision to keep your project on track.",
+      "features": [
+        "Comprehensive project planning",
+        "Budget development and management",
+        "Cost control and monitoring",
+        "Timeline scheduling and tracking",
+        "Quality supervision",
+        "Stakeholder coordination",
+        "Risk management",
+        "Progress reporting"
+      ],
+      "benefits": [
+        "Professional project oversight ensuring successful delivery",
+        "Rigorous budget and cost control maximizing value",
+        "Detailed planning and scheduling preventing delays",
+        "Comprehensive supervision maintaining quality standards"
+      ]
+    },
+    "consulting": {
+      "title": "Consulting",
+      "description": "Market analysis, feasibility studies, urban planning, permits assistance.",
+      "longDescription": "Our Consulting services provide expert guidance to help you make informed decisions about your real estate and development projects. We offer comprehensive market analysis, detailed feasibility studies, and strategic planning support.\n\nOur team of experienced consultants works closely with clients to navigate complex regulatory requirements, obtain necessary permits, and develop effective urban planning strategies. We combine local market knowledge with international best practices to deliver actionable insights.",
+      "features": [
+        "Market analysis and research",
+        "Feasibility studies",
+        "Urban planning consultation",
+        "Permits and regulatory assistance",
+        "Strategic planning",
+        "Risk assessment",
+        "Financial analysis",
+        "Due diligence support"
+      ],
+      "benefits": [
+        "Expert market insights helping you make informed investment decisions",
+        "Comprehensive feasibility studies ensuring project viability",
+        "Regulatory expertise streamlining permits and approvals",
+        "Strategic planning support for optimal project outcomes"
+      ]
+    },
+    "learnMore": "Learn More",
+    "detail": {
+      "backToServices": "Back to Services",
+      "serviceOverview": "Service Overview",
+      "keyFeatures": "Key Features",
+      "benefits": "Benefits",
+      "interested": "Interested in this Service?",
+      "contactDescription": "Contact us to learn more about how we can help with your project.",
+      "getInTouch": "Get In Touch",
+      "ourServices": "Our Services"
+    }
+  },
+  "projects": {
+    "title": "Our Projects",
+    "description": "Showcasing our portfolio of exceptional construction and development projects across Albania.",
+    "viewDetails": "View Details",
+    "readyToStart": "Ready to Start Your Project?",
+    "contactDescription": "Contact us today and let's bring your vision to life. We're here to help and answer any questions you might have.",
+    "contactUs": "Contact Us",
+    "list": [
+      {
+        "title": "Luxury Residential Complex",
+        "description": "Modern residential complex featuring sustainable design and premium amenities in the heart of southern Albania.",
+        "categoryKey": "Residential"
+      },
+      {
+        "title": "Luxury Villas",
+        "description": "Exclusive luxury villas with panoramic views, premium finishes, and sustainable design principles.",
+        "categoryKey": "Residential"
+      },
+      {
+        "title": "Affordable Housing Complex",
+        "description": "Quality residential complex designed for families, featuring modern amenities and sustainable design at accessible prices.",
+        "categoryKey": "Residential"
+      }
+    ],
+    "categories": {
+      "Residential": "Residential",
+      "Commercial": "Commercial",
+      "Tourist": "Tourist",
+      "Mixed-Use": "Mixed-Use"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us. We're here to help and answer any questions you might have.",
+    "description": "Get in touch with us today",
+    "contactInformation": {
+      "title": "Contact Information",
+      "description": "We're here to help and answer any questions you might have. We look forward to hearing from you."
+    },
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address"
+    },
+    "form": {
+      "title": "Send us a Message",
+      "fullName": "Full Name",
+      "emailAddress": "Email Address",
+      "phoneNumber": "Phone Number",
+      "message": "Message",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "phonePlaceholder": "+355 XX XXX XXXX",
+      "messagePlaceholder": "Tell us about your project...",
+      "sending": "Sending...",
+      "send": "Send Message",
+      "success": "✓ Thank you! Your message has been sent successfully.",
+      "error": "✗ Something went wrong. Please try again or contact us directly."
+    }
+  },
+  "footer": {
+    "slogan": "Building the future of Albania",
+    "company": "Company",
+    "services": "Services",
+    "contact": "Contact",
+    "aboutUs": "About Us",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePolicy": "Cookie Policy",
+    "rights": "All rights reserved.",
+    "builtWith": "Built with",
+    "excellence": "excellence",
+    "and": "and",
+    "innovation": "innovation"
+  },
+  "comingSoon": {
+    "title": "Something Amazing Is Coming Soon",
+    "subtitle": "We're working hard to bring you an exceptional experience. Stay tuned for something extraordinary!"
+  },
+  "common": {
+    "location": "Albania",
+    "year": "Year",
+    "category": "Category"
+  }
+}
+

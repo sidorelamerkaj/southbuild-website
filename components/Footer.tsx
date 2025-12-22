@@ -4,21 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react'
-
-const footerLinks = {
-  company: [
-    { name: 'About Us', href: '#about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Cookie Policy', href: '#' },
-  ],
-  services: [
-    { name: 'Investment & Development', href: '/services/investment-development' },
-    { name: 'Construction Services', href: '/services/construction-services' },
-    { name: 'Project Management', href: '/services/project-management' },
-    { name: 'Consulting', href: '/services/consulting' },
-  ],
-}
+import { useLanguage } from '@/contexts/LanguageContext'
+import { getLocalizedPath } from '@/lib/utils'
 
 const socialLinks = [
   { icon: Facebook, href: '#', label: 'Facebook' },
@@ -28,6 +15,23 @@ const socialLinks = [
 ]
 
 export default function Footer() {
+  const { t, language } = useLanguage()
+
+  const footerLinks = {
+    company: [
+      { name: t.footer.aboutUs, href: '#about' },
+      { name: t.nav.projects, href: '/projects' },
+      { name: t.footer.privacyPolicy, href: '#' },
+      { name: t.footer.cookiePolicy, href: '#' },
+    ],
+    services: [
+      { name: t.services.investment.title, href: '/services/investment-development' },
+      { name: t.services.construction.title, href: '/services/construction-services' },
+      { name: t.services.projectManagement.title, href: '/services/project-management' },
+      { name: t.services.consulting.title, href: '/services/consulting' },
+    ],
+  }
+
   return (
     <footer className="relative bg-gradient-to-b from-navy-950 to-navy-900 text-gray-300 overflow-hidden">
       {/* Background Effects */}
@@ -49,7 +53,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Link href="/" className="inline-block mb-3">
+              <Link href={getLocalizedPath('/', language)} className="inline-block mb-3">
                 <Image
                   src="/logo.png"
                   alt="SouthBuild Invest"
@@ -60,7 +64,7 @@ export default function Footer() {
               </Link>
               {/* Slogan */}
               <p className="text-gray-400 font-semibold text-sm mb-6 italic relative inline-block">
-                Building the future of Albania
+                {t.footer.slogan}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold-500 to-transparent -mb-2"></span>
               </p>
               {/* Social Links */}
@@ -89,7 +93,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <h3 className="text-white font-bold text-lg mb-6 relative inline-block">
-              Company
+              {t.footer.company}
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold-500 to-transparent"></span>
             </h3>
             <ul className="space-y-3">
@@ -105,7 +109,7 @@ export default function Footer() {
                     </a>
                   ) : (
                     <Link
-                      href={link.href}
+                      href={getLocalizedPath(link.href, language)}
                       className="text-gray-400 hover:text-gold-500 transition-colors text-sm flex items-center gap-2 group"
                     >
                       <span className="w-0 group-hover:w-2 h-0.5 bg-gold-500 transition-all duration-300"></span>
@@ -125,14 +129,14 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-white font-bold text-lg mb-6 relative inline-block">
-              Services
+              {t.footer.services}
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold-500 to-transparent"></span>
             </h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
                   <Link
-                    href={link.href}
+                    href={getLocalizedPath(link.href, language)}
                     className="text-gray-400 hover:text-gold-500 transition-colors text-sm flex items-center gap-2 group"
                   >
                     <span className="w-0 group-hover:w-2 h-0.5 bg-gold-500 transition-all duration-300"></span>
@@ -151,7 +155,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h3 className="text-white font-bold text-lg mb-6 relative inline-block">
-              Contact
+              {t.footer.contact}
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold-500 to-transparent"></span>
             </h3>
             <div className="space-y-4 mb-6">
@@ -171,7 +175,7 @@ export default function Footer() {
                 <div className="w-8 h-8 bg-gradient-to-br from-gold-500/20 to-gold-500/10 rounded-lg flex items-center justify-center border border-gold-500/30 flex-shrink-0 mt-0.5">
                   <MapPin className="w-4 h-4 text-gold-500" />
                 </div>
-                <span className="text-gray-300">Albania</span>
+                <span className="text-gray-300">{t.common.location}</span>
               </div>
             </div>
           </motion.div>
@@ -181,13 +185,13 @@ export default function Footer() {
         <div className="border-t border-gold-500/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} <span className="text-gold-500 font-semibold">SouthBuild Invest</span>. All rights reserved.
+              © {new Date().getFullYear()} <span className="text-gold-500 font-semibold">SouthBuild Invest</span>. {t.footer.rights}
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
-              <span>Built with</span>
-              <span className="text-gold-500">excellence</span>
-              <span>and</span>
-              <span className="text-gold-500">innovation</span>
+              <span>{t.footer.builtWith}</span>
+              <span className="text-gold-500">{t.footer.excellence}</span>
+              <span>{t.footer.and}</span>
+              <span className="text-gold-500">{t.footer.innovation}</span>
             </div>
           </div>
         </div>
