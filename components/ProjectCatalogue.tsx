@@ -19,8 +19,8 @@ import {
 
 const projectData = {
   title: 'Luxury Residential Complex',
-  location: 'Southern Albania',
-  year: '2024',
+  location: 'Albania',
+  year: '2026',
   category: 'Residential',
   status: 'In Development',
   description:

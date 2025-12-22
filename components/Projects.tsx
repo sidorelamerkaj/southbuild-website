@@ -7,8 +7,8 @@ import Image from 'next/image'
 const projects = [
   {
     title: 'Luxury Residential Complex',
-    location: 'Southern Albania',
-    year: '2024',
+    location: 'Albania',
+    year: '2026',
     description:
       'Modern residential complex featuring sustainable design and premium amenities in the heart of southern Albania.',
     image: '/SouthBuild_Invest-3.png',
@@ -16,8 +16,8 @@ const projects = [
   },
   {
     title: 'Commercial Business Center',
-    location: 'Tirana',
-    year: '2023',
+    location: 'Albania',
+    year: '2026 - 2027',
     description:
       'State-of-the-art commercial center with cutting-edge facilities and design, setting new standards for business spaces.',
     image: '/SouthBuild_Invest-3.png',
@@ -25,8 +25,8 @@ const projects = [
   },
   {
     title: 'Tourist Development',
-    location: 'Albanian Riviera',
-    year: '2024',
+    location: 'Albania',
+    year: '2026 - 2027',
     description:
       'Innovative tourist development combining luxury accommodations with sustainable practices along the beautiful coastline.',
     image: '/SouthBuild_Invest-3.png',
@@ -34,8 +34,8 @@ const projects = [
   },
   {
     title: 'Mixed-Use Development',
-    location: 'Southern Albania',
-    year: '2024',
+    location: 'Albania',
+    year: '2026 - 2027',
     description:
       'Comprehensive mixed-use project combining residential, retail, and office spaces to create vibrant communities.',
     image: '/SouthBuild_Invest-3.png',
@@ -43,8 +43,8 @@ const projects = [
   },
   {
     title: 'Luxury Villas',
-    location: 'Coastal Region',
-    year: '2024',
+    location: 'Albania',
+    year: '2026 - 2027',
     description:
       'Exclusive luxury villas with panoramic views, premium finishes, and sustainable design principles.',
     image: '/SouthBuild_Invest-3.png',
@@ -52,8 +52,8 @@ const projects = [
   },
   {
     title: 'Urban Regeneration Project',
-    location: 'Tirana',
-    year: '2023',
+    location: 'Albania',
+    year: '2026 - 2027',
     description:
       'Comprehensive urban regeneration project revitalizing neighborhoods with modern infrastructure and green spaces.',
     image: '/SouthBuild_Invest-3.png',
@@ -117,7 +117,7 @@ export default function Projects() {
 
                 {/* View More */}
                 <a
-                  href={project.title === 'Luxury Residential Complex' ? '/projects/luxury-residential-complex' : '#'}
+                  href="/coming-soon"
                   className="inline-flex items-center text-gold-500 font-semibold hover:text-gold-400 transition-colors group/link"
                 >
                   View Details
