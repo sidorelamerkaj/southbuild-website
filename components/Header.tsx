@@ -142,11 +142,11 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-3 z-10">
             <LanguageSwitcher />
             <a
-              href="tel:+355XXXXXXXXX"
+              href="tel:+355692077517"
               className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-navy-800/40 hover:bg-gold-500/10 border border-gold-500/20 hover:border-gold-500/40 text-gray-300 hover:text-gold-400 transition-all duration-300 group"
             >
               <Phone className="w-5 h-5 text-gold-500" />
-              <span className="text-sm font-semibold">+355 XX XX XX XXX</span>
+              <span className="text-sm font-semibold">+355 69 207 7517</span>
             </a>
           </div>
 
@@ -191,13 +191,13 @@ export default function Header() {
               ))}
               <div className="pt-4 border-t border-gold-500/20">
                 <a
-                  href="tel:+355XXXXXXXXX"
+                  href="tel:+355692077517"
                   className="flex items-center gap-3 text-gray-300 hover:text-gold-400 py-3 px-4 rounded-xl hover:bg-navy-800/50 border border-gold-500/10 hover:border-gold-500/30 transition-all"
                 >
                   <div className="w-10 h-10 bg-gradient-to-br from-gold-500/20 to-gold-500/10 rounded-lg flex items-center justify-center border border-gold-500/30">
                     <Phone className="w-5 h-5 text-gold-500" />
                   </div>
-                  <span className="font-medium">+355 XX XX XX XXX</span>
+                  <span className="font-medium">+355 69 207 7517</span>
                 </a>
               </div>
             </nav>

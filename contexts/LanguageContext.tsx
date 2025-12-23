@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import enTranslations from '@/translations/en.json'
 import sqTranslations from '@/translations/sq.json'
 
-type Language = 'en' | 'sq'
+export type Language = 'en' | 'sq'
 
 type Translations = typeof enTranslations
 

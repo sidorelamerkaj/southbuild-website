@@ -5,9 +5,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { getLocalizedPath } from '@/lib/utils'
 
 export default function Services() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const serviceCategories = [
     {
@@ -79,12 +80,12 @@ export default function Services() {
               <Link
                 href={
                   category.title === t.services.investment.title
-                    ? '/services/investment-development'
+                    ? getLocalizedPath('/services/investment-development', language)
                     : category.title === t.services.construction.title
-                    ? '/services/construction-services'
+                    ? getLocalizedPath('/services/construction-services', language)
                     : category.title === t.services.projectManagement.title
-                    ? '/services/project-management'
-                    : '/services/consulting'
+                    ? getLocalizedPath('/services/project-management', language)
+                    : getLocalizedPath('/services/consulting', language)
                 }
                 className="relative bg-gradient-to-br from-navy-800 to-navy-900 rounded-2xl overflow-hidden border border-gold-500/10 hover:border-gold-500/30 transition-all duration-300 h-full flex flex-col block"
               >

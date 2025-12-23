@@ -7,7 +7,7 @@
     "contact": "Kontakti"
   },
   "hero": {
-    "badge": "Investime dhe Zhvillim Shqiptar",
+    "badge": "Investimi & Zhvillimi Shqiptar",
     "title1": "Duke ndërtuar",
     "title2": "Shqipërinë Elitare",
     "description": "Projekte me vlerë të lartë dhe të qëndrueshme në të gjithë Shqipërinë. Zhvillim pasurish të paluajtshme, ndërtim, investime strategjike dhe menaxhim projektesh.",
@@ -72,11 +72,11 @@
     "description": "Zgjidhje gjithëpërfshirëse për investime, zhvillim, ndërtim dhe menaxhim projektesh në të gjithë Shqipërinë",
     "investment": {
       "title": "Investime dhe Zhvillim",
-      "description": "Investime në pasuri të paluajtshme, zhvillime banesore/komerciale/turistike, fizibilitet toke, joint ventures.",
+      "description": "Investime në pasuri të paluajtshme, zhvillime banimi/komerciale/turistike, fizibilitet toke, joint ventures.",
       "longDescription": "Shërbimet tona të Investimeve dhe Zhvillimit janë krijuar për t'ju ndihmuar të merrni vendime të informuara dhe të maksimizoni kthimet nga investimet tuaja në pasuri të paluajtshme. Ne specializohemi në identifikimin e mundësive me potencial të lartë në të gjithë Shqipërinë, nga zhvillimet banesore kryesore deri te projektet strategjike komerciale dhe zhvillimet turistike.\n\nMe qasjen tonë gjithëpërfshirëse, ne trajtojmë gjithçka nga studimet fillestare të fizibilitetit të tokës deri te partneritetet e joint ventures. Ekipi ynë kombinon ekspertizën e tregut me aftësinë financiare për të dorëzuar projekte që krijojnë vlerë afatgjatë për investitorët dhe komunitetet.",
       "features": [
         "Analizë investimesh në pasuri të paluajtshme",
-        "Projekte zhvillimi banesore",
+        "Projekte zhvillimi banimi",
         "Mundësi zhvillimi komerciale",
         "Planifikim zhvillimi turistik",
         "Studime fizibiliteti toke",
@@ -93,11 +93,11 @@
     },
     "construction": {
       "title": "Shërbimet e Ndërtimit",
-      "description": "Ndërtesa banesore, villa, hapësira tregtare, rinovime, ekzekutim i plotë i projektit.",
-      "longDescription": "Divizioni ynë i Shërbimeve të Ndërtimit dorëzon ekselencë në çdo projekt, nga ndërtesat luksoze banesore dhe villat deri te hapësirat komerciale moderne. Ne kombinojmë zanatësinë tradicionale me teknikat moderne të ndërtimit për të krijuar struktura që qëndrojnë testin e kohës.\n\nQoftë se keni nevojë për një ndërtim të plotë të ri ose një rinovim gjithëpërfshirës, ekipi ynë me përvojë menaxhon çdo aspekt të procesit të ndërtimit. Ne sigurojmë cilësi, efikasitet dhe përputhje me standardet më të larta të industrisë gjatë gjithë ciklit jetësor të projektit.",
+      "description": "Ndërtesa banimi, villa, hapësira tregtare, rinovime, ekzekutim i plotë i projektit.",
+      "longDescription": "Divizioni ynë i Shërbimeve të Ndërtimit dorëzon ekselencë në çdo projekt, nga ndërtesat luksoze të banimit dhe villat deri te hapësirat komerciale moderne. Ne kombinojmë zanatësinë tradicionale me teknikat moderne të ndërtimit për të krijuar struktura që qëndrojnë testin e kohës.\n\nQoftë se keni nevojë për një ndërtim të plotë të ri ose një rinovim gjithëpërfshirës, ekipi ynë me përvojë menaxhon çdo aspekt të procesit të ndërtimit. Ne sigurojmë cilësi, efikasitet dhe përputhje me standardet më të larta të industrisë gjatë gjithë ciklit jetësor të projektit.",
       "features": [
-        "Ndërtim ndërtesash banesore",
-        "Zhvillim villa luksoze",
+        "Ndërtim ndërtesash banimi",
+        "Zhvillim vila luksoze",
         "Ndërtim hapësirash tregtare",
         "Rinovim dhe rimodelim",
         "Ekzekutim i plotë i projektit",
@@ -134,7 +134,7 @@
       ]
     },
     "consulting": {
-      "title": "Konsultime",
+      "title": "Konsulta",
       "description": "Analizë tregu, studime fizibiliteti, planifikim urban, asistencë lejesh.",
       "longDescription": "Shërbimet tona të Konsultimit ofrojnë udhëzim ekspert për t'ju ndihmuar të merrni vendime të informuara për projektet tuaja të pasurive të paluajtshme dhe zhvillimit. Ne ofrojmë analizë gjithëpërfshirëse të tregut, studime të detajuara fizibiliteti dhe mbështetje planifikimi strategjik.\n\nEkipi ynë i konsulentëve me përvojë punon ngushtë me klientët për të lundruar kërkesat komplekse rregullatore, për të marrë lejet e nevojshme dhe për të zhvilluar strategji efektive planifikimi urban. Ne kombinojmë njohuritë e tregut lokal me praktikat më të mira ndërkombëtare për të dorëzuar njohuri të veprueshme.",
       "features": [
@@ -162,13 +162,13 @@
       "benefits": "Përfitimet",
       "interested": "Të Interesuar për këtë Shërbim?",
       "contactDescription": "Na kontaktoni për të mësuar më shumë se si mund t'ju ndihmojmë me projektin tuaj.",
-      "getInTouch": "Lidhuni me Ne",
+      "getInTouch": "Kontaktoni",
       "ourServices": "Shërbimet Tona"
     }
   },
   "projects": {
     "title": "Projektet Tona",
-    "description": "Duke treguar portofolin tonë të projekteve të jashtëzakonshme të ndërtimit dhe zhvillimit në të gjithë Shqipërinë.",
+    "description": "Vizitoni portofolin tonë të projekteve të jashtëzakonshme të ndërtimit dhe zhvillimit në të gjithë Shqipërinë.",
     "viewDetails": "Shiko Detajet",
     "readyToStart": "Gati për të Filluar Projektin Tuaj?",
     "contactDescription": "Na kontaktoni sot dhe le ta bëjmë realitet vizionin tuaj. Ne jemi këtu për të ndihmuar dhe për t'u përgjigjur çdo pyetjeje që mund të keni.",
@@ -176,34 +176,34 @@
     "list": [
       {
         "title": "Kompleks Banimi Luksoz",
-        "description": "Kompleks banesor modern me dizajn të qëndrueshëm dhe lehtësira premium në zemër të Shqipërisë jugore.",
+        "description": "Kompleks banimi modern me dizajn të qëndrueshëm dhe lehtësira premium në zemër të Shqipërisë jugore.",
         "categoryKey": "Residential"
       },
       {
-        "title": "Villa Luksoze",
-        "description": "Villa ekskluzive luksoze me pamje panoramike, përfundime premium dhe parime dizajni të qëndrueshëm.",
+        "title": "Vila Luksoze",
+        "description": "Vila luksoze ekskluzive me pamje panoramike, materiale cilësore dhe dizajn të qëndrueshëm.",
         "categoryKey": "Residential"
       },
       {
-        "title": "Kompleks Banesor për Familje",
-        "description": "Kompleks banesor me cilësi të lartë i projektuar për familje, me lehtësira moderne dhe dizajn të qëndrueshëm me çmime të arritshme.",
+        "title": "Kompleks Banimi për Familje",
+        "description": "Kompleks banimi me cilësi të lartë i projektuar për familje, me lehtësira moderne dhe dizajn të qëndrueshëm me çmime të arritshme.",
         "categoryKey": "Residential"
       }
     ],
     "categories": {
-      "Residential": "Banesore",
-      "Commercial": "Komerci",
+      "Residential": "Banimi",
+      "Commercial": "Komerciale",
       "Tourist": "Turistik",
       "Mixed-Use": "Me Përdorim Të Përzier"
     }
   },
   "contact": {
     "title": "Na Kontaktoni",
-    "subtitle": "Lidhuni me ne. Ne jemi këtu për të ndihmuar dhe për t'u përgjigjur çdo pyetjeje që mund të keni.",
-    "description": "Lidhuni me ne sot",
+    "subtitle": "Qëndroni në kontakt. Ne jemi këtu për të ndihmuar dhe për t'u përgjigjur çdo pyetjeje që mund të keni.",
+    "description": "Kontaktoni tani",
     "contactInformation": {
       "title": "Informacioni i Kontaktit",
-      "description": "Ne jemi këtu për të ndihmuar dhe për t'u përgjigjur çdo pyetjeje që mund të keni. Ne shohim përpara për të dëgjuar nga ju."
+      "description": "Ne jemi këtu për të ndihmuar dhe për t'u përgjigjur çdo pyetjeje që mund të keni. Jemi ne pritje të dëgjojmë nga ju!"
     },
     "info": {
       "phone": "Telefoni",
@@ -242,10 +242,10 @@
   },
   "comingSoon": {
     "title": "Diçka e Mrekullueshme Po Vjen Së Shpejti",
-    "subtitle": "Ne po punojmë me zell për t'ju sjellë një përvojë të jashtëzakonshme. Qëndroni të lidhur për diçka të jashtëzakonshme!"
+    "subtitle": "Ne po punojmë me zell për t'ju sjellë një përvojë të jashtëzakonshme. Qëndroni të informuar për diçka të jashtëzakonshme!"
   },
   "common": {
-    "location": "Shqipëria",
+    "location": "Shqipëri",
     "year": "Viti",
     "category": "Kategoria"
   }

@@ -8,9 +8,9 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const contactInfoKeys = ['phone', 'email', 'address'] as const
 const contactIcons = [Phone, Mail, MapPin]
 const contactLinks = [
-  'tel:+355XXXXXXXXX',
+  'tel:+355692077517',
   'mailto:info@southbuildinvest.com',
-  '#',
+  'https://www.google.com/maps/search/?api=1&query=Albania',
 ]
 
 export default function Contact() {
@@ -25,7 +25,7 @@ export default function Contact() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const contactContent = [
-    '+355 XX XXX XXXX',
+    '+355 69 207 7517',
     'info@southbuildinvest.com',
     t.common.location,
   ]
@@ -120,6 +120,8 @@ export default function Contact() {
                 <motion.a
                   key={index}
                   href={info.link}
+                  target={info.link.startsWith('http') ? '_blank' : undefined}
+                  rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}

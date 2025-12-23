@@ -159,24 +159,35 @@ export default function Footer() {
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold-500 to-transparent"></span>
             </h3>
             <div className="space-y-4 mb-6">
-              <div className="flex items-center gap-3 text-sm">
-                <div className="w-8 h-8 bg-gradient-to-br from-gold-500/20 to-gold-500/10 rounded-lg flex items-center justify-center border border-gold-500/30 flex-shrink-0">
+              <a
+                href="tel:+355692077517"
+                className="flex items-center gap-3 text-sm text-gray-300 hover:text-gold-400 transition-colors group"
+              >
+                <div className="w-8 h-8 bg-gradient-to-br from-gold-500/20 to-gold-500/10 rounded-lg flex items-center justify-center border border-gold-500/30 flex-shrink-0 group-hover:border-gold-500/50 transition-colors">
                   <Phone className="w-4 h-4 text-gold-500" />
                 </div>
-                <span className="text-gray-300">+355 69 XXX XXXX</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm">
-                <div className="w-8 h-8 bg-gradient-to-br from-gold-500/20 to-gold-500/10 rounded-lg flex items-center justify-center border border-gold-500/30 flex-shrink-0">
+                <span>+355 69 207 7517</span>
+              </a>
+              <a
+                href="mailto:info@southbuildinvest.com"
+                className="flex items-center gap-3 text-sm text-gray-300 hover:text-gold-400 transition-colors group"
+              >
+                <div className="w-8 h-8 bg-gradient-to-br from-gold-500/20 to-gold-500/10 rounded-lg flex items-center justify-center border border-gold-500/30 flex-shrink-0 group-hover:border-gold-500/50 transition-colors">
                   <Mail className="w-4 h-4 text-gold-500" />
                 </div>
-                <span className="text-gray-300 break-all">info@southbuildinvest.com</span>
-              </div>
-              <div className="flex items-start gap-3 text-sm">
-                <div className="w-8 h-8 bg-gradient-to-br from-gold-500/20 to-gold-500/10 rounded-lg flex items-center justify-center border border-gold-500/30 flex-shrink-0 mt-0.5">
+                <span className="break-all">info@southbuildinvest.com</span>
+              </a>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Albania"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 text-sm text-gray-300 hover:text-gold-400 transition-colors group"
+              >
+                <div className="w-8 h-8 bg-gradient-to-br from-gold-500/20 to-gold-500/10 rounded-lg flex items-center justify-center border border-gold-500/30 flex-shrink-0 mt-0.5 group-hover:border-gold-500/50 transition-colors">
                   <MapPin className="w-4 h-4 text-gold-500" />
                 </div>
-                <span className="text-gray-300">{t.common.location}</span>
-              </div>
+                <span>{t.common.location}</span>
+              </a>
             </div>
           </motion.div>
         </div>
