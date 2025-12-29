@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import '../globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
+import CookieConsent from '@/components/CookieConsent'
+import GoogleTags from '@/components/GoogleTags'
+import GoogleTagManagerNoscript from '@/components/GoogleTagManagerNoscript'
 
 export const metadata: Metadata = {
   title: 'SouthBuild Invest - Premium Construction & Investment',
@@ -26,8 +30,17 @@ export default function LocaleLayout({
 }) {
   return (
     <html lang={params.locale}>
+      <head>
+        {/* Google Tag Manager and Google Analytics - loaded after cookie consent */}
+        <GoogleTags />
+      </head>
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        {/* Google Tag Manager (noscript) - loaded after cookie consent */}
+        <GoogleTagManagerNoscript />
+        <LanguageProvider>
+          {children}
+          <CookieConsent />
+        </LanguageProvider>
       </body>
     </html>
   )

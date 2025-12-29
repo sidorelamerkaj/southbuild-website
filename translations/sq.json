@@ -248,6 +248,108 @@
     "location": "Shqipëri",
     "year": "Viti",
     "category": "Kategoria"
+  },
+  "cookieConsent": {
+    "title": "Pëlqimi i Cookies",
+    "description": "Ne përdorim cookies për të përmirësuar përvojën tuaj të shfletimit dhe për të analizuar trafikun e faqes. Duke klikuar 'Prano', ju pranoni përdorimin tonë të cookies. Mësoni më shumë në",
+    "privacyPolicy": "Politikën tonë të Privatësisë",
+    "and": "dhe",
+    "cookiePolicy": "Politikën tonë të Cookies",
+    "accept": "Prano Të Gjitha",
+    "decline": "Refuzo"
+  },
+  "privacyPolicy": {
+    "title": "Politika e Privatësisë",
+    "lastUpdated": "Përditësuar së fundmi: 29 Dhjetor 2025",
+    "contact": "Nëse keni ndonjë pyetje për këtë Politikë Privatësie, ju lutemi na kontaktoni në",
+    "sections": [
+      {
+        "title": "1. Hyrje",
+        "content": "SouthBuild Invest ('ne', 'tonë', ose 'na') është e përkushtuar për të mbrojtur privatësinë tuaj. Kjo Politikë Privatësie shpjegon se si ne mbledhim, përdorim, zbulojmë dhe mbrojmë informacionin tuaj kur vizitoni faqen tonë të internetit."
+      },
+      {
+        "title": "2. Informacioni që Mbledhim",
+        "content": [
+          "Informacioni personal që ju ofroni (emri, email, numri i telefonit) kur na kontaktoni",
+          "Informacioni i mbledhur automatikisht (adresa IP, lloji i shfletuesit, informacioni i pajisjes)",
+          "Të dhënat e përdorimit dhe informacioni i analizave përmes Google Analytics"
+        ]
+      },
+      {
+        "title": "3. Si Përdorim Informacionin Tuaj",
+        "content": [
+          "Për t'u përgjigjur pyetjeve tuaja dhe për të ofruar shërbim klienti",
+          "Për të përmirësuar faqen tonë të internetit dhe shërbimet",
+          "Për të analizuar përdorimin dhe trendet e faqes",
+          "Për t'ju dërguar përditësime për shërbimet tona (me pëlqimin tuaj)"
+        ]
+      },
+      {
+        "title": "4. Ndarja e Të Dhënave",
+        "content": "Ne nuk shesim, tregtojmë ose marrim me qira informacionin tuaj personal me palë të treta. Ne mund të ndajmë informacion me ofrues shërbimi që na ndihmojnë në funksionimin e faqes sonë, kryerjen e biznesit tonë ose shërbimin e përdoruesve tanë, me kusht që ata të bien dakord të mbajnë këtë informacion konfidencial."
+      },
+      {
+        "title": "5. Siguria e Të Dhënave",
+        "content": "Ne zbatojmë masa të përshtatshme teknike dhe organizative për të mbrojtur informacionin tuaj personal. Megjithatë, asnjë metodë transmetimi nëpërmjet Internetit nuk është 100% e sigurt."
+      },
+      {
+        "title": "6. Të Drejtat Tuaja",
+        "content": [
+          "Aksesoni të dhënat tuaja personale",
+          "Kërkoni korrigjimin e të dhënave të pasakta",
+          "Kërkoni fshirjen e të dhënave tuaja",
+          "Kundërshtoni përpunimin e të dhënave tuaja",
+          "Kërkoni portabilitetin e të dhënave"
+        ]
+      },
+      {
+        "title": "7. Cookies",
+        "content": "Ne përdorim cookies dhe teknologji të ngjashme ndjekjeje. Për informacion të detajuar, ju lutemi shihni Politikën tonë të Cookies."
+      },
+      {
+        "title": "8. Ndryshime në këtë Politikë",
+        "content": "Ne mund të përditësojmë këtë Politikë Privatësie herë pas here. Ne do t'ju njoftojmë për çdo ndryshim duke postuar Politikën e re të Privatësisë në këtë faqe."
+      }
+    ]
+  },
+  "cookiePolicy": {
+    "title": "Politika e Cookies",
+    "lastUpdated": "Përditësuar së fundmi: 29 Dhjetor 2025",
+    "contact": "Nëse keni ndonjë pyetje për këtë Politikë Cookies, ju lutemi na kontaktoni në",
+    "sections": [
+      {
+        "title": "1. Çfarë Janë Cookies",
+        "content": "Cookies janë skedarë tekst të vegjël që vendosen në pajisjen tuaj kur vizitoni një faqe interneti. Ato përdoren gjerësisht për të bërë faqet e internetit të funksionojnë më efikas dhe për të ofruar informacion pronarëve të faqeve të internetit."
+      },
+      {
+        "title": "2. Si Përdorim Cookies",
+        "content": [
+          "Cookies thelbësore: Të nevojshme që faqja e internetit të funksionojë siç duhet",
+          "Cookies analitike: Na ndihmojnë të kuptojmë se si vizitorët ndërveprojnë me faqen tonë të internetit (Google Analytics)",
+          "Cookies performancë: Mbledhin informacion për mënyrën se si përdorni faqen tonë të internetit"
+        ]
+      },
+      {
+        "title": "3. Llojet e Cookies që Përdorim",
+        "content": [
+          "Google Analytics (G-NJCNQ2ZVEX): Ndiq përdorimin e faqes dhe sjelljen e vizitorëve për të na ndihmuar të përmirësojmë shërbimet tona",
+          "Cookies sesioni: Cookies të përkohshme që fshihen kur mbyllni shfletuesin tuaj",
+          "Cookies të qëndrueshme: Mbeten në pajisjen tuaj për një periudhë të caktuar ose derisa t'i fshini"
+        ]
+      },
+      {
+        "title": "4. Menaxhimi i Cookies",
+        "content": "Ju mund të kontrolloni dhe menaxhoni cookies përmes cilësimeve të shfletuesit tuaj. Ju gjithashtu mund të përdorni bannerin tonë të pëlqimit të cookies për të pranuar ose refuzuar cookies jo-thelbësore. Vini re se çaktivizimi i cookies mund të ndikojë në funksionalitetin e faqes."
+      },
+      {
+        "title": "5. Cookies të Palëve të Treta",
+        "content": "Ne përdorim Google Analytics, i cili mund të vendosë cookies në pajisjen tuaj. Këto cookies i nënshtrohen Politikës së Privatësisë së Google."
+      },
+      {
+        "title": "6. Përditësime në këtë Politikë",
+        "content": "Ne mund të përditësojmë këtë Politikë Cookies herë pas here. Ju lutemi rishikoni këtë faqe periodikisht për çdo ndryshim."
+      }
+    ]
   }
 }
 

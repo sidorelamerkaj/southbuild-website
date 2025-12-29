@@ -21,8 +21,8 @@ export default function Footer() {
     company: [
       { name: t.footer.aboutUs, href: '#about' },
       { name: t.nav.projects, href: '/projects' },
-      { name: t.footer.privacyPolicy, href: '#' },
-      { name: t.footer.cookiePolicy, href: '#' },
+      { name: t.footer.privacyPolicy, href: '/privacy-policy' },
+      { name: t.footer.cookiePolicy, href: '/cookie-policy' },
     ],
     services: [
       { name: t.services.investment.title, href: '/services/investment-development' },
